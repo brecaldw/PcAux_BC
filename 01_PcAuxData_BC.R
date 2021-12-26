@@ -1052,7 +1052,7 @@ PcAuxData$
                 options(na.action = oldOpt$na.action)
                 
                 ## Remove dummy codes for empty factor levels:
-                levVec                 <-  sapply(tmp, countLevels)
+                levVec                 <-  lapply(tmp, countLevels)
                 dumNoms[[v]]           <<- data.frame(tmp[ , levVec > 1])
                 colnames(dumNoms[[v]]) <<- dumNames[levVec > 1]
             }
