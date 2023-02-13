@@ -1,0 +1,41 @@
+export(prepData,
+       createPcAux,
+       miWithPcAux,
+       mergePcAux,
+       makePredMatrix,
+       inspect,
+       getImpData,
+       pcAuxW,
+       pcAuxL,
+       calcTime,
+       writeStatus,
+       getLoggedEvents)
+
+import(methods)
+
+importFrom("mice",
+           "mice",
+           "complete",
+           "quickpred")
+importFrom("parallel",
+           "makeCluster",
+           "clusterEvalQ",
+           "parLapply",
+           "parApply",
+           "stopCluster")
+importFrom("stats",
+           ".lm.fit",
+           "cor",
+           "cov",
+           "prcomp",
+           "sd",
+           "runif",
+           "na.omit")
+importFrom("rlecuyer",
+           ".lec.SetPackageSeed",
+           ".lec.GetStreams",
+           ".lec.CreateStream",
+           ".lec.CurrentStream")
+importFrom("utils",
+           "capture.output",
+           "sessionInfo")
